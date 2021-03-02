@@ -1,0 +1,5 @@
+apiVersion: v2
+name: mukube-vnet
+version: "0.1.0"
+maintainers:
+  - name: Jacob Crawford
