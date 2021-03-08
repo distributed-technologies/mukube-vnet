@@ -67,6 +67,7 @@ jobs:
         with: 
           commit_message: "New helm chart version ${{ steps.get-latest-tag.outputs.tag }}"
           tagging_message: ${{ steps.get-latest-tag.outputs.tag }}
+          push_options: --force
     
       - name: Helm lint
         run: helm lint chart
