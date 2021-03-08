@@ -47,11 +47,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
-      # Checkout after tag delete
+      # Checkout after tag delete as Github Actions Bot
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
           ref: ${{ env.BRANCH }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update Helm Chart version
         if: ${{ env.USE_QUOTES_HELM }} 
